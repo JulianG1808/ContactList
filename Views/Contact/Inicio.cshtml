@@ -12,7 +12,7 @@
                 <h4>Lista de Contacto</h4>
             </div>
             <div class="panel-body">
-                <a class="btn btn-success">Crear Nuevo</a>
+                <a class="btn btn-success" href="@Url.Action("Register", "Contact")">Crear Nuevo</a>
                 <hr />
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -33,8 +33,8 @@
                                     <td>@item.Telefono</td>
                                     <td>@item.Correo</td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm">Editar</a>
-                                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                                        <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Contact", new { idContact = item.IdContacto })">Editar</a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Contact", new { idContact = item.IdContacto })">Eliminar</a>
                                     </td>
                                 </tr>
                             }
